@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top, #cfd9df, #e2ebf0);
+    padding: 1;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 150px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 30px #afafaf;
+}
+
+h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+h2 img {
+    width: 40px; /* Adjusted size here */
+    position: absolute;
+    right: 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: 3px groove #000;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-sizing: 0 0 10px #5d5d5d;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: #1e008d;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 20px; /* Adjusted padding */
+    background: #26062f;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 1px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 8px 12px 40px; /* Adjusted padding */
+    user-select: none; /* Prevent text selection */
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px; /* Adjusted size */
+    width: 20px; /* Adjusted size */
+    border-radius: 50%;
+    background: url(images/unchecked.png) no-repeat center; /* Center the background image */
+    background-size: cover;
+    left: 10px; /* Adjusted spacing */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li.checked {
+    background: #3700a4;
+    color: #fff;
+    border-radius: 50px;
+}
+
+ul li.checked::before {
+    background: url(images/checked.png) no-repeat center; /* Center the background image */
+    background-size: cover;
+}
+
+.delete-button {
+    background-color: #ff3b3b;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    right: 10px; /* Adjusted position */
+    top: 50%;
+    transform: translateY(-50%);
+}
